@@ -1,9 +1,6 @@
-version: "3.8"
-
 services:
-  frontend:
-    build: .
-    container_name: travel_frontend
+  nginx:
+    image: travel-frontend-main-frontend
     ports:
-      - "80:80"
-    restart: always
+      - "5173:80"
+    restart: unless-stopped
